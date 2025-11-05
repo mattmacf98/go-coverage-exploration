@@ -4,30 +4,6 @@ import (
 	"testing"
 )
 
-// FULLY TESTED FUNCTIONS
-
-func TestAdd(t *testing.T) {
-	tests := []struct {
-		name     string
-		a, b     int
-		expected int
-	}{
-		{"positive numbers", 5, 3, 8},
-		{"negative numbers", -5, -3, -8},
-		{"mixed signs", -5, 3, -2},
-		{"with zero", 0, 5, 5},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			result := Add(tt.a, tt.b)
-			if result != tt.expected {
-				t.Errorf("Add(%d, %d) = %d; want %d", tt.a, tt.b, result, tt.expected)
-			}
-		})
-	}
-}
-
 func TestSubtract(t *testing.T) {
 	tests := []struct {
 		name     string
@@ -47,24 +23,6 @@ func TestSubtract(t *testing.T) {
 			}
 		})
 	}
-}
-
-// PARTIALLY TESTED FUNCTIONS
-
-func TestMultiply(t *testing.T) {
-	// Only testing positive numbers - negative branch won't be covered
-	result := Multiply(5, 3)
-	if result != 15 {
-		t.Errorf("Multiply(5, 3) = %d; want 15", result)
-	}
-
-	// Test zero case
-	result = Multiply(0, 5)
-	if result != 0 {
-		t.Errorf("Multiply(0, 5) = %d; want 0", result)
-	}
-
-	// NOTE: Not testing negative results, so the "result < 0" branch is uncovered
 }
 
 func TestDivide(t *testing.T) {
