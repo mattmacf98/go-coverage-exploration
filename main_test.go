@@ -25,6 +25,13 @@ func TestSubtract(t *testing.T) {
 	}
 }
 
+func TestMultiply(t *testing.T) {
+	result := Multiply(5, 3)
+	if result != 15 {
+		t.Errorf("Multiply(5, 3) = %d; want 15", result)
+	}
+}
+
 func TestDivide(t *testing.T) {
 	// Only testing successful division - not testing the error case
 	result, err := Divide(10, 2)
