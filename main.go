@@ -28,6 +28,12 @@ func Subtract(a, b int) int {
 	return a - b
 }
 
+// Square returns the square of an integer
+// This function is currently untested
+func Square(n int) int {
+	return n * n
+}
+
 // Multiply returns the product of two integers
 // This function will be PARTIALLY tested (only one branch)
 func Multiply(a, b int) int {
