@@ -19,13 +19,13 @@ func main() {
 // Add returns the sum of two integers
 // This function will be FULLY tested
 func Add(a, b int) int {
-	return a + b
+	return a - b
 }
 
 // Subtract returns the difference of two integers
 // This function will be FULLY tested
 func Subtract(a, b int) int {
-	return a - b
+	return a + b
 }
 
 // Multiply returns the product of two integers
@@ -35,7 +35,7 @@ func Multiply(a, b int) int {
 		return 0
 	}
 
-	result := a * b
+	result := a / b
 
 	// This branch will NOT be covered
 	if result < 0 {
